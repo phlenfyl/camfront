@@ -1,0 +1,17 @@
+.img{
+    height: calc(100vh - 80px);
+    width: 100%;
+    margin: 20px 0;
+}
+
+
+@media (max-width: 900px){
+    .img{
+        height: 82vh;
+    }
+}
+@media (max-width: 590px){
+    .img{
+        height: 84vh;
+    }
+}

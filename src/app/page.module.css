@@ -1,0 +1,505 @@
+.container{
+    position: relative;
+}
+
+.texts{
+    position: absolute;
+    top: 15%;
+    margin-left: 4.5em;
+}
+
+.texts .title{
+    font-size: 5.6em;
+    margin-bottom: 12px;
+    color: #EDEDED;
+    font-family: var(--script-font) !important;
+    line-height: 1.2em;
+    font-weight: 400 !important;
+}
+.texts .desc{
+    font-size: 1.5em;
+    margin: 6px 0;
+    line-height: 1.4em;
+    color: #EDEDED;
+    font-family: var(--quick-font) !important;
+}
+.butlike{
+    padding: 0.9em 1.8em;
+    font-size: 1.375em;
+    border: 1px solid #EDEDED;
+    background-color: transparent;
+    color: #EDEDED;
+    cursor: pointer;
+    border-radius: 0.5em;
+    transition: all 0.4s ease-in-out;
+}
+
+.aboutsub{
+    margin-top: 7em;
+    text-align: center;
+}
+
+.aboutsub .abttitle{
+    font-size: 4em;
+    margin: 20px 0;
+    color: #7D1A54;
+    font-family: var(--script-font) !important;
+    font-weight: 400 !important;
+}
+
+.abtdesc{
+    font-size: 1.5em;
+    color: #030804;
+    line-height: 1.4em;
+    margin-bottom: 2em;
+}
+
+.but{
+    margin-top: 2.5em;
+}
+
+.like{
+    padding: 0.8em 2em;
+    font-size: 1.4em;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: transparent;
+    color: #7D1A54;
+    border: 2px solid #7D1A54;
+    border-radius: 0.5em;
+    transition: all 0.4s ease-in-out;
+}
+
+.sermons{
+    padding: 0.9em 1.8em;
+    font-size: 1.375em;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: #7D1A54;
+    color: white;
+    border: none;
+    border-radius: 0.5em;
+    margin-left: 2em;
+}
+
+/* ####################### SERMONS AREA ############################ */
+.sermon{
+    text-align: center;
+}
+.sermon .title{
+    color: #7D1A54;
+    font-size: 4em;
+    padding-bottom: 0.5em;
+    font-family: var(--script-font) !important;
+    font-weight: 400;
+}
+.sermon .desc{
+    font-size: 1.7em;
+    margin-top: 1em;
+    color: rgba(26, 21, 21, 0.877);
+    font-family: var(--quick-font) !important;
+    /* padding: 1.4em 0; */
+}
+.sermon .cards{
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 6em 15em;
+}
+.sermon .cardTexts{
+    text-align: left;
+    margin-left: 1.5em !important;
+    margin: 1em 0;
+    /* margin-bottom: 1em; */
+}
+.sermon .cardTexts .author{
+    font-size: 16px;
+}
+.sermon .cardTexts .link{
+    text-decoration: underline !important;
+    color: #7D1A54;
+    font-size: 1.25em;
+}
+.sermon .cardTexts .book{
+    font-size: 22px;
+    font-weight: 400;
+    flex-wrap: wrap !important;
+    width: 10em;
+    margin: 0.3em 0;
+    color: #030804;
+}
+.grids .imgContainer{
+    position: relative !important;
+    height: 200px !important;
+}
+.cards .imgContainer .img{
+    width: 212px;
+    height: 210px;
+}
+.sermon .butlike{
+    padding: 0.8em 1.7em;
+    font-size: 1.4em;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: transparent;
+    color: #7D1A54;
+    border: 1px solid #7D1A54;
+    border-radius: 0.5em;
+    transition: all 0.4s ease-in-out;
+}
+
+/* ####################### CONTACT AREA ############################ */
+.program{
+    text-align: center;
+    padding: 5em 0;
+}
+.program .title{
+    color: #7D1A54;
+    font-size: 4em;
+    font-weight: 400;
+    padding-bottom: 0.5em;
+    font-family: var(--script-font) !important;
+}
+.content .grids .cardTexts .link{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 0 2em;
+    padding: 0;
+    font-size: 1.2em;
+    color: #7D1A54;
+    text-decoration: underline;
+    font-weight: 500;
+}
+.content .grids .cardTexts .mainTitle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 2em;
+    padding-bottom: 2em;
+}
+.content .grids .cardTexts .mainTitle .author{
+    font-family: var(--script-font) !important;
+    font-size: 1.5em;
+}
+.content .grids .cardTexts .mainTitle .book{
+    font-family: var(--quick-font) !important;
+    font-size: 1.2em;
+}
+.content .grids{
+    border: 1px solid #777777;
+    padding: 1em 0;
+    border-radius: 1em;
+}
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    row-gap: 3em;
+    column-gap: 1.5em;
+    margin: 4em 20em;
+}  
+.content .grids .img {
+    height: 14.88em;
+    width: 95%;
+}
+.program .butlike{
+    padding: 0.8em 1.7em;
+    font-size: 1.4em;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: transparent;
+    color: #7D1A54;
+    border: 1px solid #7D1A54;
+    border-radius: 0.5em;
+    transition: all 0.4s ease-in-out;
+}
+
+/* ######################## PROGRAMS AREA ########################### */
+.mainSlider{
+    padding: 10em 0;
+    text-align: center;
+    color: #7D1A54;
+}
+.mainSlider .title{
+    font-size: 4em;
+    font-weight: 400;
+    margin-bottom: 1em;
+    font-family: var(--script-font) !important;
+}
+.slider .butlike{
+    padding: 0.8em 1.7em;
+    font-size: 1.4em;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: transparent;
+    color: #7D1A54;
+    border: 1px solid #7D1A54;
+    border-radius: 0.5em;
+    transition: all 0.4s ease-in-out;
+}
+.slider{
+    margin: 0 10em;
+}
+.slider .img{
+    height: auto !important;
+    width: 100% !important;
+}
+.owl{
+    margin-bottom: 3em;
+}
+#wrapper {
+    padding: 5%;
+    margin: 0 auto;
+}
+
+@media (max-width: 1242px){
+    .texts{
+        top: 20%;
+        margin-left: 4em !important;
+    }
+    .title{
+        font-size: 4em !important;
+    }
+    .desc{
+        font-size: 1em !important;
+    }
+    /* sermon */
+    .butlike, .sermons{
+        padding: 0.7em 1.2em;
+        font-size: 1.1em;
+    }
+    .sermon .cards{
+        margin: 3.5em 6em;
+        gap: 0;
+    }
+    .cards .imgContainer .img{
+        width: 80%;
+    }
+    .sermon .cardTexts{
+        margin-left: 2.2em !important;
+    }
+    .sermon .cardTexts .author,.sermon .cardTexts .link{
+        font-size: 14px;
+    }    
+    .sermon .cardTexts .book{
+        font-size: 15px;
+        margin: 0.3em 0;
+        font-weight: 500;
+    }
+    .sermon .butlike{
+        padding: 0.8em 1.7em;
+        font-size: 1.4em;
+    }
+    /* program */
+    .content {
+        margin: 6em 2em;
+    }
+}
+@media (max-width: 900px){
+    /* sermon */
+    .sermon .cardTexts .book{
+        width: 11em;
+        font-weight: 600;
+    }
+    .sermon .title{
+        font-size: 3.5em;
+    }
+    .sermon .desc{
+        font-size: 1.2em;
+    }
+    .sermon .cards{
+        margin: 3.5em 4em;
+        gap: 0;
+    }
+    .cards .imgContainer .img{
+        width: 80%;
+    }
+    /* program */
+    .program{
+        padding-top: 2em !important;
+        padding-bottom: 8em !important;
+    }
+    .program .title{
+        font-size: 3.5em;
+    }
+    .program .desc{
+        font-size: 1.2em;
+    }
+    .program .butlike{
+        margin-top: 0em;
+        padding: 0.5em 1em;
+    }
+    .content {
+        margin: 4em 7.5em;
+        grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+    }
+    .content .grids .cardTexts .mainTitle .author{
+        font-size: 1em;
+        margin-left: -2em;
+        padding-top: 0.6em;
+    }
+    .content .grids .cardTexts .mainTitle .book{
+        font-size: 0.9em;
+        margin-right: -2em;
+    }
+    .content .grids{
+        padding: 0.7em 0.7em;
+    }
+    .content .grids .cardTexts .mainTitle{
+        margin-left: 2em;
+        padding-bottom: 0.5em;
+    }
+    .content .grids .cardTexts .link{
+        margin-left: 0.2em !important;
+    }
+    /* slider */
+    .mainSlider .title{
+        font-size: 3.5em;
+    }
+    .mainSlider{
+        padding: 10em 0;
+    }
+    .slider{
+        margin: 0 5em;
+    }
+}
+@media (max-width: 590px){
+    .texts{
+        margin-left: 2em !important;
+    }
+    .mainSlider .title{
+        font-size: 3em !important;
+    }
+    .desc{
+        font-size: 0.9em !important;
+    }
+    .butlike{
+        padding: 0.5em 0.8em !important;
+        font-size: 1.2em !important;
+    }
+    .sermons{
+        padding: 0.6em 1em !important;
+        font-size: 1.2em !important;
+    }
+    .aboutsub{
+        margin-top: 6em;
+    }
+    .aboutsub .abttitle{
+        font-size: 3em;
+    }
+    .aboutsub .abtdesc{
+        font-size: 18px;
+        margin-bottom: 2em;
+    }
+    .like{
+        padding: 0.5em 1em;
+        font-size: 1em;
+    }
+}
+@media (max-width: 580px){
+    /* sermon */
+    .sermon .title{
+        font-size: 3em !important;
+    }
+    .sermon .desc{
+        font-size: 1em;
+    }
+    .sermon .cards{
+        margin: 3.5em 0;
+    }
+    .cards .imgContainer .img{
+        width: 140px;
+        height: 180px;
+    }
+    .sermon .cardTexts{
+        margin-left: 1em !important;
+        margin: 0.5em 0;
+    }
+    .sermon .cardTexts .author{
+        font-size: 11px;
+    }
+    .sermon .cardTexts .link{
+        font-size: 1.25em;
+        padding-bottom: 1em;
+    }    
+    .sermon .cardTexts .book{
+        font-size: 13px;
+        max-width: 10.6em;
+    }
+    .sermon .butlike{
+        padding: 0.5em 1em;
+        font-size: 1em;
+    }
+
+    /* program */
+    .content {
+        margin: 2em 1.5em;
+    }
+    .program .title{
+        font-size: 2.5em !important;
+    }
+    .program .desc{
+        font-size: 1em;
+    }
+    .content .grids .cardTexts .link{
+        font-size: 1em;
+    }
+    .program .butlike{
+        padding: 0.5em 1em;
+    }
+    .content .grids .cardTexts .mainTitle .author{
+        font-size: 0.9em;
+        margin-left: -2.4em;
+    }
+    .content .grids .cardTexts .mainTitle .book{
+        font-size: 0.8em;
+        margin-right: -2.4em;
+    }
+
+    /* slider */
+    .mainSlider .title{
+        font-size: 3em;
+    }
+    .mainSlider{
+        padding: 8em 0;
+    }
+    .slider{
+        margin: 0 2em;
+    }
+    .butlike{
+        padding: 0.5em 1em;
+        font-size: 1em;
+    }
+}
+@media (max-width: 390px){
+    .cards .imgContainer .img{
+        width: 100%;
+    }
+    .sermon .cardTexts{
+        margin-left: 0.2em !important;
+        margin: 0 0;
+    }
+    .sermon .cardTexts{
+        font-size: 13px;
+    }
+    
+    .sermon .cardTexts .book{
+        font-size: 18px;
+    }
+}
+@media (max-width: 320px){
+    .desc{
+        font-size: 0.81em !important;
+    }
+    .aboutsub .abtdesc{
+        font-size: 16px;
+    } 
+   
+}
+
+
+
+
+

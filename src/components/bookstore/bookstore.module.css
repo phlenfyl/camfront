@@ -1,0 +1,188 @@
+.bookstore{
+    margin: 4em 0;
+    padding: 6em 0;
+    text-align: center;
+    background-color: #7D1A54;
+    color: white;
+}
+
+.bookstore .title{
+    font-size: 4em;
+    padding-bottom: 0.5em;
+    font-weight: 400;
+    font-family: var(--script-font) !important;
+}
+
+.bookstore .desc{
+    font-size: 1.5em;
+    line-height: 1.4em;
+    padding-bottom: 0.5em;
+    color: rgb(219, 221, 221);
+    font-family: var(--quick-font) !important;
+}
+
+.bookstore .mainCards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    row-gap: 5em;
+    column-gap: 2.375em;
+    margin: 7em 8.5em;
+}
+
+.mainCards .grids .imgContainer .img{
+    width: 212px;
+    height: 326px;
+}
+
+.bookstore .cardTexts{
+    text-align: left;
+    margin-left: 0.7em !important;
+    margin: 1em 0;
+}
+
+.bookstore .cardTexts .author{
+    font-size: 20px;
+    color: whitesmoke;
+    font-weight: lighter;
+}
+
+.bookstore .cardTexts .book{
+    font-size: 21px;
+    font-weight: 400;
+    flex-wrap: wrap;
+    margin: 0.3em 0;
+    margin-bottom: 0.7em !important;
+}
+
+.bookstore .cardTexts .link, .bookstore .but{
+    background-color: white;
+    color: #7D1A54;
+    font-size: 1.3em;
+    font-weight: 590;
+    padding: 8px;
+    border-radius: 0.3em;
+}
+
+.bookstore .but{
+    padding: 0.8em 1.7em;
+    font-size: 1.4em;
+    border-radius: 0.3em;
+}
+
+@media (max-width: 1242px){
+    .bookstore .mainCards{
+        margin: 3.5em 6em;
+        gap: 0;
+    }
+    .mainCards .grids .imgContainer .img{
+        width: 80%;
+    }
+    .bookstore .cardTexts{
+        margin-left: 2.2em !important;
+    }
+    .bookstore .cardTexts .author,.bookstore .cardTexts .link{
+        font-size: 14px;
+    }
+    
+    .bookstore .cardTexts .book{
+        font-size: 15px;
+        margin: 0.3em 0;
+        font-weight: 500;
+    }
+    .bookstore .butlike{
+        padding: 0.8em 1.7em;
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width: 900px){
+    .bookstore .title{
+        font-size: 3.5em;
+    }
+    .bookstore .desc{
+        font-size: 1.2em;
+    }
+    .bookstore .mainCards{
+        margin: 3.5em 4em;
+        gap: 0;
+    }
+    .mainCards .grids .imgContainer .img{
+        width: 80%;
+        height: 30vh;
+    }
+}
+
+@media (max-width: 580px){
+    .bookstore{
+        margin: 5em 0;
+        padding: 3em 0;
+    }
+    .bookstore .title{
+        font-size: 2.5em;
+    }
+    .bookstore .desc{
+        font-size: 1em;
+    }
+    .bookstore .mainCards{
+        margin: 3.5em 0;
+    }
+    .mainCards .grids .imgContainer .img{
+        width: 70%;
+        height: 27vh;
+    }
+    .bookstore .cardTexts{
+        margin-left: 2.2em !important;
+        margin: 0.5em 0;
+    }
+    .bookstore .cardTexts .author,.bookstore .cardTexts .link{
+        font-size: 15px;
+    }
+    
+    .bookstore .cardTexts .book{
+        font-size: 13px;
+    }
+    .cardTexts .link{
+        padding: 3px;
+        font-size: 1em;
+    }
+    
+    .bookstore .but{
+        font-size: 1em;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 390px){
+    .bookstore .cardTexts{
+        margin: 3em 0;
+    }
+    
+    .bookstore .cardTexts .author{
+        font-size: 1.1em !important;
+        margin-left: 3.3em !important;
+        font-weight: 400;
+    }
+    
+    .bookstore .cardTexts .book{
+        font-size: 1.1em;
+        margin-left: 3.3em !important;
+    }
+    .mainCards .grids .imgContainer .img{
+        width: 50%;
+        height: 40vh;
+    }
+    .cardTexts .link{
+        margin-left: 4em !important;
+        margin-bottom: 2em;
+        padding: 0.3em 0.7em;
+    }
+    
+    .bookstore .but{
+        font-size: 1.2em;
+        padding: 10px;
+    }
+    .bookstore .mainCards{
+        gap: 1.5em;
+    }
+}
+

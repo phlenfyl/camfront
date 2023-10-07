@@ -1,0 +1,175 @@
+.container .banner{
+    background: #46013B;
+    width: 100%;
+    height: 20.12em;
+    margin: 1.5em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.banner .img{
+    object-fit: fill;
+    height: 100%;
+    width: 35% !important;
+}
+.banner .bannerHeader{
+    margin-left: 7em;
+    padding-left: 5em;
+}
+
+.bannerHeader .title{
+    color: #EDEDED;
+    font-size: 4em;
+    font-family: var(--script-font) !important;
+    font-weight: 400;
+}
+
+.bannerHeader .desc{
+    font-size: 1.7em;
+    margin-top: 1em;
+    color: #EDEDED;
+    font-family: var(--quick-font) !important;
+    font-weight: lighter !important;
+}
+
+.mainContent{
+    margin: 7em 26em;
+    text-align: center;
+}
+.mainContent .title{
+    color: #7D1A54;
+    font-size: 4em;
+    font-weight: 400;
+    padding-bottom: 0.5em;
+    font-family: var(--script-font) !important;
+    line-height: 1em;
+}
+
+.mainContent .desc{
+    line-height: 1.4em;
+    font-size: 1.5em;
+    color: rgb(51, 49, 49);
+    padding-bottom: 0.5em;
+    font-family: var(--quick-font) !important;
+}
+.content{
+    margin-top: 3em;
+}
+.form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.form div{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+}
+.form div label{
+    text-align: start;
+}
+.form div input, .form div textarea{
+    width: 100%;
+}
+  
+.input,
+.textArea {
+    padding: 21px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #1b1a1a;
+    border: 1px solid #777777;
+    font-size: 15px;
+    font-weight: small;
+}
+
+.butlike{
+    margin-top: 1em;
+    padding: 18px 0;
+    width: 40% !important;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    background-color: #7D1A54;
+    color: white;
+    border-radius: 0.5em;
+    transition: all 0.4s ease-in-out;
+}
+
+@media (max-width: 1242px){
+    .container .banner{
+        height: 15.12em;
+    }
+    .banner .bannerHeader{
+        margin-left: 3em;
+    }
+    .banner .img{
+        height: 100%;
+    }
+    .bannerHeader .title{
+        font-size: 2.5em;
+    }
+    
+    .bannerHeader .desc{
+        font-size: 1.3em;
+    }
+    .mainContent{
+        margin: 7em 19em;
+    }
+}
+
+@media (max-width: 900px){
+    .container .banner{
+        height: 12.12em;
+    }
+    .banner .img{
+        height: 194px;
+        width: 40%;
+    }
+    .banner .bannerHeader{
+        padding-left: 1em;
+    }
+    .bannerHeader .title{
+        font-size: 2.5em;
+    }
+    
+    .bannerHeader .desc{
+        font-size: 1em;
+    }
+    .mainContent{
+        margin: 7em 13em;
+    }
+}
+
+@media (max-width: 580px){
+    .container .banner{
+        height: 12.12em;
+    }
+    .banner .img{
+        display: none;
+    }
+    .banner .bannerHeader{
+        padding-left: 1em;
+    }
+    .bannerHeader .title{
+        font-size: 2em;
+    }
+    
+    .bannerHeader .desc{
+        font-size: 1em;
+    }
+    .mainContent{
+        margin: 7em 0.3em !important;
+    }
+    .mainContent .title{
+        font-size: 3em;
+    }
+    .mainContent .desc{
+        font-size: 1.2em;
+    }
+}
+
+
+
