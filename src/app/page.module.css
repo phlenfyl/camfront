@@ -121,6 +121,11 @@
     text-decoration: underline !important;
     color: #7D1A54;
     font-size: 1.25em;
+    border: none;
+    cursor: pointer;
+}
+.audio{
+    display: none !important;
 }
 .sermon .cardTexts .book{
     font-size: 22px;
@@ -133,10 +138,6 @@
 .grids .imgContainer{
     position: relative !important;
     height: 200px !important;
-}
-.cards .imgContainer .img{
-    width: 212px;
-    height: 210px;
 }
 .sermon .butlike{
     padding: 0.8em 1.7em;
@@ -177,12 +178,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 2em;
+    margin: 0 1em;
     padding-bottom: 2em;
 }
 .content .grids .cardTexts .mainTitle .author{
     font-family: var(--script-font) !important;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 .content .grids .cardTexts .mainTitle .book{
     font-family: var(--quick-font) !important;
@@ -190,7 +191,7 @@
 }
 .content .grids{
     border: 1px solid #777777;
-    padding: 1em 0;
+    padding: 1em 0.7em;
     border-radius: 1em;
 }
 .content {
@@ -296,6 +297,12 @@
     .content {
         margin: 6em 2em;
     }
+    .content .grids{
+        padding: 0.7em 0.7em;
+    }
+    .content .grids .cardTexts .link{
+        margin: 0 0.8em;
+    }
 }
 @media (max-width: 900px){
     /* sermon */
@@ -343,9 +350,6 @@
     .content .grids .cardTexts .mainTitle .book{
         font-size: 0.9em;
         margin-right: -2em;
-    }
-    .content .grids{
-        padding: 0.7em 0.7em;
     }
     .content .grids .cardTexts .mainTitle{
         margin-left: 2em;
@@ -407,7 +411,7 @@
         font-size: 1em;
     }
     .sermon .cards{
-        margin: 3.5em 0;
+        margin: 3.5em 0 !important;
     }
     .cards .imgContainer .img{
         width: 140px;
@@ -451,11 +455,12 @@
     }
     .content .grids .cardTexts .mainTitle .author{
         font-size: 0.9em;
-        margin-left: -2.4em;
+        margin-left: -3em;
+        word-wrap: break-word !important;
     }
     .content .grids .cardTexts .mainTitle .book{
         font-size: 0.8em;
-        margin-right: -2.4em;
+        margin-right: -2em;
     }
 
     /* slider */

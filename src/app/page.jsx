@@ -9,7 +9,7 @@ import { getSermon, getMain, getSlider } from './api/api'
 import 'owl.carousel/dist/assets/owl.carousel.css'
 import 'owl.carousel/dist/assets/owl.theme.default.css'
 import Bookstore from '@/components/bookstore/Bookstore'
-
+import { handleDownload, handleStream } from './api/audhand'
 
 var $ = require('jquery');
 if (typeof window !== 'undefined'){
@@ -128,12 +128,16 @@ export default async function Home() {
             (
               <div className={styles.grids} key={item.slug}>
                 <div className={styles.imgContainer}>
-                  <Image alt={item.title} src={item.img} quality={100} sizes="(min-width: 808px) 50vw, 100vw" style={{ objectFit: 'contain',}} fill className={styles.img}/>
+                  <Image onClick={() => handleStream(item.audio_url, 'audio')} alt={item.title} src={item.img} quality={100} sizes="(min-width: 808px) 50vw, 100vw" style={{ objectFit: 'contain',}} fill className={styles.img}/>
+                  <audio id="audio" controls className={styles.audio}>
+                    <source src={item.audio_url} type="audio/mpeg" />
+                    Your browser does not support the audio element.
+                  </audio>
                 </div>
                 <div className={styles.cardTexts}>
                   <small className={styles.author}>{item.author_name}</small>
                   <p className={styles.book}>{item.title}</p>
-                  <a href="/" className={styles.link}>Download</a>
+                  <button className={styles.link} onClick={(e) =>{e.preventDefault(); handleDownload(item.audio_url);}}>Download</button>
                 </div>
               </div>
             )

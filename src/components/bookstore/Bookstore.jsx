@@ -8,14 +8,14 @@ const Bookstore = () => {
   return (
     <div className={styles.mainContainer}>
         <div className={styles.bookstore}>
-            <h2 className={styles.title}>Top Books Available <br /> in our Bookstore</h2>
-            <small className={styles.desc}>A Gateway to higher Consciousness <br /> Elevate your Spirituality with Us</small>
-            <div className={styles.mainCards}>
-                <div>
-                    Available Soon
-                </div>
+          <h2 className={styles.title}>Top Books Available <br /> in our Bookstore</h2>
+          <small className={styles.desc}>A Gateway to higher Consciousness <br /> Elevate your Spirituality with Us</small>
+          <div className={styles.mainCards}>
+            <div>
+              Available Soon
             </div>
-            <Link href='/bookstore' className={styles.but}>More Books</Link>
+          </div>
+          <Link href='/bookstore' className={styles.but}>More Books</Link>
         </div>
     </div>
   )

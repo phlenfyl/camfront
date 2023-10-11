@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { items } from './data'
+// import { items } from './data'
 import Link from 'next/link'
 import styles from './page.module.css'
 import books from 'public/books.png'
@@ -22,7 +22,10 @@ const bookstore = () => {
                 />
             </div>
             <div className={styles.cards}>
-                {items.map(item => (
+                Available Soon
+                Speak to us here about what you want
+                <Link href='/contact' className={styles.link}>Enquiry</Link>
+                {/* {items.map(item => (
                     <div className={styles.grids} key={item.id}>
                         <Image alt={item.title} className={styles.image} src={item.image} quality={100} fill={true}/>
                         <div className={styles.cardTexts}>
@@ -31,7 +34,7 @@ const bookstore = () => {
                             <Link href={item.url} className={styles.link}>Buy Now</Link>
                         </div>
                     </div>
-                ))}
+                ))} */}
             </div>
         </div>
     </div>

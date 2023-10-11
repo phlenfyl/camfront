@@ -1,53 +1,39 @@
-import React from 'react'
+'use client'
+
+import React, { Suspense } from 'react'
 import styles from './sermon.module.css'
 import Image from 'next/image'
-import go from 'public/go.png'
+import { useRouter } from 'next/navigation'
+import { handleDownload, handleStream } from '../api/audhand'
+import { getSermon } from '../api/api'
+import Loading from './loading'
 
-async function getData() {
-  const res = await fetch('http://127.0.0.1:8000/sermon/sermoncl', { next: { revalidate: 10 } })
-  // The return value is *not* serialized
-  // You can return Date, Map, Set, etc.
- 
-  if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
-    throw new Error('Failed to fetch data')
-  }
- 
-  return res.json()
-}
 
 async function sermon () {
-  const data = await getData()
+  const router = useRouter()
+  const data = await getSermon('/sermon/sermoncl')
+
   return (
-    <div className={styles.mainContainer}>
-      <div className={styles.container}>
-        <div className={styles.banner}>
-          <div className={styles.bannerHeader}>
-            <h2 className={styles.title}>Listen to our <br /> Messages</h2>
-            <small className={styles.desc}>Listen and Download Messages</small>
-          </div>
-          <Image alt='banner image'
-            src={go}
-            quality={100}
-            fill={false}
-            className={styles.img}
-          />
-        </div>
-        <div className={styles.cards}>
-          {data.map(item => (
-            <div className={styles.grids} key ={item.slug}>
-              <div className={styles.imgContainer}>
-                <Image fill src={'http://127.0.0.1:8000' + item.img} sizes="(min-width: 808px) 50vw, 100vw" style={{ objectFit: 'contain',}} alt={item.name} className={styles.image} />
-              </div>
-              <div className={styles.cardTexts}>
-                <small className={styles.author}>{item.author_name}</small>
-                <p className={styles.book}>{item.title}</p>
-                <a href='/' className={styles.link}>Download</a>
-              </div>
+
+    <div className={styles.cards}>
+      <Suspense fallback={<Loading/>}>
+        {data.map(item => (
+          <div className={styles.grids} key ={item.slug}>
+            <div className={styles.imgContainer}>
+              <Image onClick={() => handleStream(item.audio_url, 'audio')} fill src={item.img} alt={item.title} sizes="(min-width: 808px) 50vw, 100vw" style={{ objectFit: 'contain',}} className={styles.image} />
+              <audio id="audio" controls className={styles.audio}>
+                <source src={item.audio_url} type="audio/mpeg" />
+                Your browser does not support the audio element.
+              </audio>
             </div>
-          ))}
-        </div>
-      </div>
+            <div className={styles.cardTexts}>
+              <small className={styles.author}>{item.author_name}</small>
+              <p className={styles.book}>{item.title}</p>
+              <button className={styles.link} onClick={(e) =>{e.preventDefault(); handleDownload(item.audio_url);}}>Download</button>
+            </div>
+          </div>
+        ))}
+      </Suspense>
     </div>
   )
 }

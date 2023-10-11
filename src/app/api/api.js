@@ -1,8 +1,10 @@
 const API_BASE_URL = 'http://127.0.0.1:8000';
+const API_SERVER_URL = 'https://mfmadmin-izldar4i.b4a.run';
 
 
 export async function getSermon(endpoint) {
-    const response = await fetch(`${API_BASE_URL}${endpoint}`, { next: { revalidate: 10 } });
+    const response = await fetch(`${API_SERVER_URL}${endpoint}`, { next: { revalidate: 60 } });
+    // const response = await fetch(`${API_BASE_URL}${endpoint}`, { next: { revalidate: 60 } });
     if (!response.ok) {
         throw new Error(`API request failed with status ${response.status}`);
     }
@@ -11,7 +13,8 @@ export async function getSermon(endpoint) {
 }
 
 export async function getSlider(endpoint) {
-    const response = await fetch(`${API_BASE_URL}${endpoint}`, { next: { revalidate: 10 } });
+    const response = await fetch(`${API_SERVER_URL}${endpoint}`, { next: { revalidate: 60 } });
+    // const response = await fetch(`${API_BASE_URL}${endpoint}`, { next: { revalidate: 60 } });
     if (!response.ok) {
         throw new Error(`API request failed with status ${response.status}`);
     }
@@ -20,7 +23,8 @@ export async function getSlider(endpoint) {
 }
 
 export async function getMain(endpoint) {
-    const response = await fetch(`${API_BASE_URL}${endpoint}`, { next: { revalidate: 10 } });
+    const response = await fetch(`${API_SERVER_URL}${endpoint}`, { next: { revalidate: 60 } });
+    // const response = await fetch(`${API_BASE_URL}${endpoint}`, { next: { revalidate: 60 } });
     if (!response.ok) {
         throw new Error(`API request failed with status ${response.status}`);
     }

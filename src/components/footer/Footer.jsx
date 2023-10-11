@@ -3,7 +3,6 @@ import Link from 'next/link'
 import styles from './footer.module.css'
 import Image from 'next/image'
 import MFM from 'public/mfm.png'
-// import Button from '@/components/button/Button'
 
 const Footer = () => {
   return (
@@ -18,21 +17,21 @@ const Footer = () => {
         </div>
         <div className={styles.link}>
           <Link href='/' className={styles.links}>MFM Cameroon</Link>
-          <Link href='/' className={styles.links}>About Us</Link>
-          <Link href='/' className={styles.links}>Contact Us</Link>
+          <Link href='/mfmcam' className={styles.links}>About Us</Link>
+          <Link href='/contact' className={styles.links}>Contact Us</Link>
           <Link href='/' className={styles.links}>Privacy Policy</Link>
         </div>
         <div className={styles.link}>
-          <Link href='/' className={styles.links}>Messages</Link>
-          <Link href='/' className={styles.links}>Available Books</Link>
-          <Link href='/' className={styles.links}>Our Program</Link>
+          <Link href='/sermon' className={styles.links}>Messages</Link>
+          <Link href='/bookstore' className={styles.links}>Available Books</Link>
+          <Link href='/programs' className={styles.links}>Our Program</Link>
         </div>
         <div className={styles.link}>
-          <Link href='/' className={styles.links}>Contact</Link>
+          <Link href='/contact' className={styles.links}>Contact</Link>
           <Link href='/' className={styles.links}>Mega Regional <br /> 
             headquarters, Omnisport <br /> Yaoundé Cameroon.
           </Link>
-          <Link href='/' className={styles.links}>Telephone; 
+          <Link href='tel: +237677293958' className={styles.links}>Telephone; 
             +237 677293958,              
             +237697524514.
           </Link>

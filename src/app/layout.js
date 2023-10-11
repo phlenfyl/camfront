@@ -7,7 +7,7 @@ const quick = Quicksand({ subsets: ['latin'], weight:'400', display:'swap' })
 
 export const metadata = {
   title: 'MFM Yaounde',
-  description: 'Official Platform of mfm cameroon',
+  description: 'Official website of mfm cameroon Mega Regional HQ. Omnisport Yaoundé Cameroon',
 }
 
 export default function RootLayout({ children }) {

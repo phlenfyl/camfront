@@ -59,6 +59,9 @@
 .container .cardTexts .author{
     font-size: 16px;
 }
+.audio{
+    display: none !important;
+}
 
 
 .container .cardTexts .link{
@@ -66,6 +69,8 @@
     color: #7D1A54;
     font-size: 1.25em;
     font-weight: 500;
+    border: none;
+    cursor: pointer;
 }
 
 .container .cardTexts .book{
