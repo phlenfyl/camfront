@@ -3,14 +3,12 @@
 import React, { Suspense } from 'react'
 import styles from './sermon.module.css'
 import Image from 'next/image'
-import { useRouter } from 'next/navigation'
 import { handleDownload, handleStream } from '../api/audhand'
 import { getSermon } from '../api/api'
 import Loading from './loading'
 
 
 async function sermon () {
-  const router = useRouter()
   const data = await getSermon('/sermon/sermoncl')
 
   return (
