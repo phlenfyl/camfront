@@ -1,5 +1,5 @@
 const API_BASE_URL = 'http://127.0.0.1:8000';
-const API_SERVER_URL = 'https://mfmadmin-izldar4i.b4a.run';
+const API_SERVER_URL = 'https://backendcam-64bo4zjn.b4a.run';
 
 
 export async function getSermon(endpoint) {
